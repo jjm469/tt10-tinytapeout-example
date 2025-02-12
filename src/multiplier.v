@@ -128,6 +128,12 @@ module FXPIterMultControl #(
         send_val = 1;
       end
       default: begin
+        in_wait = 1;
+        do_add = 0;
+        do_carry = 0;
+        counter_reset = 0;
+        recv_rdy = 1;
+        send_val = 0;
       end
     endcase
   end
