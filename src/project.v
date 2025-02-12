@@ -58,6 +58,7 @@ assign uo_out[7]   = send_val;
 // Assign unused output pins to zero
 // Note, unused GPIO MUST be assigned zero!
 assign uio_out     = '0;
+assign uio_oe      = '0;
 
 
 // Module Instanciation --------------------------------------
