@@ -43,6 +43,8 @@ assign multiplicand_b = {ui_in[7:6], uio_in[3:0]};
 assign recv_val       = uio_in[4];
 assign send_rdy       = uio_in[5];
 
+// List all unused inputs to prevent warnings
+wire _unused = &{ena, 1'b0,uio_in[7], uio_in[6]};
 
 // Outputs
 logic [5:0] product;
@@ -79,9 +81,6 @@ fixed_point_iterative_Multiplier #(
   .c(product)
 );
 
-
-  // List all unused inputs to prevent warnings
-  wire _unused = &{ena, 1'b0};
 
 
 
