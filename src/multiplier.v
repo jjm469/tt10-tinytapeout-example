@@ -35,7 +35,7 @@ module fixed_point_iterative_Multiplier #(
   // multiplying, and then shifting right
   logic do_carry, do_add, in_wait;
 
-  FXPIterMultControl #(n, d) control (
+  FXPIterMultControl #(n) control (
     .clk(clk),
     .reset(reset),
     .recv_val(recv_val),
