@@ -58,6 +58,10 @@ assign uo_out[7]   = send_val;
 // Assign unused output pins to zero
 // Note, unused GPIO MUST be assigned zero!
 assign uio_out     = '0;
+
+
+// Assign uio_oe to either 0 or 1 depending on whether the
+// pins are inputs or outputs respectively.
 assign uio_oe      = '0;
 
 
